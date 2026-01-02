@@ -1,0 +1,54 @@
+[
+  {
+    "id": "autoreply",
+    "name": "AutoReply | AI Smart Message",
+    "description": "Send AI-generated or custom replies instantly on WhatsApp, Instagram & Facebook. Automate your messaging with intelligent responses powered by cutting-edge AI technology.",
+    "icon": "https://play-lh.googleusercontent.com/MD4f4Aia3wwoDkXK3d_5V4lbq4pD8-OPwOwFMTnsb0wPCoW70-9F4SBsTK6lw0sfDJ4=s256-rw",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.matrix.autoreply",
+    "rating": 4.7,
+    "downloads": "3K+",
+    "reviews": 56,
+    "badges": ["AI Powered", "Featured"],
+    "featured": true
+  },
+  {
+    "id": "multigpt",
+    "name": "MultiGPT | AI Chat & Compare",
+    "description": "Chat with multiple AI models simultaneously and compare their responses. Perfect for getting diverse perspectives on any topic.",
+    "icon": "https://play-lh.googleusercontent.com/fTxwhs4WT4_-5_YW_1eNn6oZozcpGuQ-Iv5lxX9fU4IwTooVc3Cab1wnBO_em5_5pVtrQj9V1S7d9FJWgAmDkg=s256-rw",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.matrix.multigpt",
+    "badges": ["AI Powered", "Productivity"]
+  },
+  {
+    "id": "splitx",
+    "name": "SplitX",
+    "description": "Split expenses effortlessly with friends, family, or roommates. Track shared costs and settle debts with ease.",
+    "icon": "https://play-lh.googleusercontent.com/nzO3BN5xTeBzoOFHWxQ5RzldxtJWHlEImsRSLPnrKonl6IBjMKAFOFPsJJpENf2StTQ2r7QSBSlUXjLgA6jK=s256-rw",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.splitxapp.expense",
+    "badges": ["Finance", "Utilities"]
+  },
+  {
+    "id": "qr-scanner",
+    "name": "QR & Barcode | Offline Scan",
+    "description": "Fast, reliable QR and barcode scanning that works completely offline. No internet required for scanning.",
+    "icon": "https://play-lh.googleusercontent.com/qzDNjtBdhUOKPCPKmzplLkgbmx4G9Gfnet32XU5wmQy_f3K1xdpVTEWMLODfhg0C1g=s256-rw",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.matrix.barcode",
+    "badges": ["Utilities", "Offline"]
+  },
+  {
+    "id": "drawing-board",
+    "name": "Drawing Board | Brush, Shapes",
+    "description": "Express your creativity with brushes, shapes, and colors. A simple yet powerful drawing app for all ages.",
+    "icon": "https://play-lh.googleusercontent.com/q5UPx7BmnyRrTs5Pc8Iqoksu0ibsEn_U1XngILcN64RBbBzrcNG6e8wUkNlP_5OobcU=s256-rw",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.matrix.drawing",
+    "badges": ["Creative", "Art"]
+  },
+  {
+    "id": "random-quotes",
+    "name": "Random Quotes & Design Studio",
+    "description": "Discover inspiring quotes and create beautiful designs. Share wisdom and motivation with your friends.",
+    "icon": "https://play-lh.googleusercontent.com/seqGqL9bvQTfU__9Oe_HgxenFsE28NUIOFHPDBVejuqH2l82p8vUNbRVnW1d3n5KmktK51gZwlD90Pq89VgrDiU=s256-rw",
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.matrix.quotes",
+    "badges": ["Lifestyle", "Creative"]
+  }
+]
