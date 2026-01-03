@@ -33,21 +33,21 @@ export default function FeaturedApp({ app }: FeaturedAppProps) {
           <p className="text-surface-400 mb-6 leading-relaxed">{app.description}</p>
           
           <div className="flex gap-6 mb-6">
-            {app.rating && (
+            {app.rating != null && app.rating > 0 && (
               <div className="text-center">
-                <div className="text-xl font-bold text-primary-400">{app.rating} ★</div>
+                <div className="text-xl font-bold text-primary-400">{app.rating.toFixed(1)} ★</div>
                 <div className="text-xs text-surface-500">User Rating</div>
               </div>
             )}
-            {app.downloads && (
+            {app.downloads && app.downloads !== '0' && (
               <div className="text-center">
                 <div className="text-xl font-bold text-primary-400">{app.downloads}</div>
                 <div className="text-xs text-surface-500">Downloads</div>
               </div>
             )}
-            {app.reviews && (
+            {app.reviews != null && app.reviews > 0 && (
               <div className="text-center">
-                <div className="text-xl font-bold text-primary-400">{app.reviews}</div>
+                <div className="text-xl font-bold text-primary-400">{app.reviews.toLocaleString()}</div>
                 <div className="text-xs text-surface-500">Reviews</div>
               </div>
             )}

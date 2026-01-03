@@ -7,7 +7,8 @@ import FeaturedApp from '../components/FeaturedApp'
 import AppsGrid from '../components/AppsGrid'
 import About from '../components/About'
 import CTA from '../components/CTA'
-import apps from '../data/apps.json'
+import appsConfig from '../data/apps.json'
+import { fetchAppData, formatDownloads } from '../lib/playstore'
 
 interface App {
   id: string
@@ -15,9 +16,9 @@ interface App {
   description: string
   icon: string
   playStoreUrl: string
-  rating?: number
-  downloads?: string
-  reviews?: number
+  rating?: number | null
+  downloads?: string | null
+  reviews?: number | null
   badges: string[]
   featured?: boolean
 }
@@ -70,18 +71,69 @@ export default function Home({ apps, stats }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  // Calculate stats from apps data
+  // Extract app IDs from config
+  const appIds = appsConfig.map(app => {
+    const match = app.playStoreUrl.match(/id=([^&]+)/)
+    return match ? match[1] : null
+  }).filter(Boolean) as string[]
+
+  // Fetch live data from Play Store for each app
+  const liveData = await Promise.all(
+    appIds.map(async (appId) => {
+      try {
+        return await fetchAppData(appId)
+      } catch (e) {
+        console.error(`Failed to fetch ${appId}`)
+        return null
+      }
+    })
+  )
+
+  // Build apps array from Play Store data (use config only for badges/featured)
+  const apps: App[] = appsConfig.map((config, index) => {
+    const live = liveData[index]
+    return {
+      id: config.id,
+      name: live?.title || config.name,
+      description: live?.summary || config.description,
+      icon: live?.icon || config.icon,
+      playStoreUrl: config.playStoreUrl,
+      rating: live?.score ?? null,
+      downloads: live?.installs ?? null,
+      reviews: live?.ratings ?? null,
+      badges: config.badges,
+      featured: config.featured ?? false
+    }
+  })
+
+  // Calculate stats from Play Store data
   const totalApps = apps.length
-  const totalReviews = apps.reduce((sum, app) => sum + (app.reviews || 0), 0)
-  const appsWithRatings = apps.filter(app => app.rating)
+  
+  // Sum all ratings (reviews count from Play Store)
+  const totalReviews = liveData.reduce((sum, app) => sum + (app?.ratings || 0), 0)
+  
+  // Calculate average rating from apps that have ratings
+  const appsWithRatings = liveData.filter(app => app?.score && app.score > 0)
   const avgRating = appsWithRatings.length > 0 
-    ? appsWithRatings.reduce((sum, app) => sum + (app.rating || 0), 0) / appsWithRatings.length
-    : 4.7
+    ? appsWithRatings.reduce((sum, app) => sum + (app?.score || 0), 0) / appsWithRatings.length
+    : 0
+
+  // Sum all downloads using minInstalls from Play Store
+  const totalDownloads = liveData.reduce((sum, app) => {
+    return sum + (app?.minInstalls || 0)
+  }, 0)
+
+  console.log('[Stats] From Play Store API:', {
+    totalApps,
+    totalDownloads,
+    avgRating,
+    totalReviews
+  })
 
   const stats = {
     totalApps,
-    totalDownloads: "1K+", // Could be calculated if we had individual download numbers
-    avgRating: Math.round(avgRating * 10) / 10,
+    totalDownloads: formatDownloads(totalDownloads),
+    avgRating: appsWithRatings.length > 0 ? Math.round(avgRating * 10) / 10 : 0,
     totalReviews
   }
 

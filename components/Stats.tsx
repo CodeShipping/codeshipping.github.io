@@ -13,8 +13,8 @@ export default function Stats({ stats }: StatsProps) {
   const statItems = [
     { value: `${stats.totalApps}+`, label: 'Apps Published' },
     { value: stats.totalDownloads, label: 'Downloads' },
-    { value: stats.avgRating, label: 'Avg Rating' },
-    { value: `${stats.totalReviews}+`, label: 'Reviews' },
+    { value: stats.avgRating > 0 ? `${stats.avgRating} ★` : 'New', label: stats.avgRating > 0 ? 'Avg Rating' : 'Apps' },
+    { value: stats.totalReviews > 0 ? `${stats.totalReviews}+` : '—', label: 'Reviews' },
   ]
 
   return (
