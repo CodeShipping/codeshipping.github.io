@@ -45,8 +45,12 @@
     @apply opacity-100 translate-y-0;
   }
 
+  .apps {
+    @apply relative z-10 py-24 px-8;
+  }
+
   .section-header {
-    @apply text-center mb-16;
+    @apply text-center mb-12;
   }
 
   .section-header h2 {
