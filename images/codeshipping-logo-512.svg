@@ -1,0 +1,27 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <circle cx="256" cy="256" r="230" fill="#0d1117"/>
+  
+  <!-- Abstract geometric shape - like Stripe, Vercel -->
+  <g opacity="0.25">
+    <path d="M 256 102 L 384 179 L 333 307 L 179 307 L 128 179 Z" stroke="#00d9ff" stroke-width="5" fill="none"/>
+  </g>
+  
+  <!-- Gradient accent bar -->
+  <defs>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0.4" />
+    </linearGradient>
+  </defs>
+  <rect x="154" y="384" width="204" height="10" rx="5" fill="url(#accentGrad)"/>
+  
+  <!-- Forward chevrons -->
+  <g opacity="0.3" stroke="#00ff88" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 358 128 L 384 140 L 358 153"/>
+    <path d="M 384 128 L 410 140 L 384 153"/>
+  </g>
+  
+  <!-- CS Letters -->
+  <text x="256" y="320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="174" font-weight="700" fill="white" text-anchor="middle" letter-spacing="-5">CS</text>
+</svg>

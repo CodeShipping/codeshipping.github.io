@@ -1,0 +1,49 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="1200" height="300" fill="#0d1117"/>
+  
+  <!-- Logo circle on left with v4 design -->
+  <circle cx="150" cy="150" r="70" fill="#0d1117" stroke="#1a1a1a" stroke-width="1"/>
+  
+  <!-- Abstract geometric shape from v4 -->
+  <g opacity="0.25">
+    <path d="M 150 110 L 185 130 L 173 165 L 127 165 L 115 130 Z" stroke="#00d9ff" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Gradient accent bar in logo -->
+  <defs>
+    <linearGradient id="logoAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0.4" />
+    </linearGradient>
+    <linearGradient id="bannerAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  <rect x="125" y="190" width="50" height="3" rx="1.5" fill="url(#logoAccent)"/>
+  
+  <!-- Forward chevrons in logo -->
+  <g opacity="0.3" stroke="#00ff88" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 175 120 L 182 124 L 175 128"/>
+    <path d="M 182 120 L 189 124 L 182 128"/>
+  </g>
+  
+  <!-- CS in logo -->
+  <text x="150" y="175" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="48" font-weight="700" fill="white" text-anchor="middle" letter-spacing="-1">CS</text>
+  
+  <!-- Company name -->
+  <text x="280" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="72" font-weight="700" fill="white" letter-spacing="-1">CodeShipping</text>
+  
+  <!-- Tagline -->
+  <text x="280" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="400" fill="#8b949e">Build. Ship. Repeat.</text>
+  
+  <!-- Decorative geometric elements on right -->
+  <g opacity="0.2">
+    <path d="M 1050 100 L 1080 115 L 1070 145 L 1040 145 L 1030 115 Z" stroke="#00d9ff" stroke-width="1.5" fill="none"/>
+    <path d="M 1100 180 L 1130 195 L 1120 225 L 1090 225 L 1080 195 Z" stroke="#00d9ff" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Accent bar on right -->
+  <rect x="1050" y="260" width="100" height="3" rx="1.5" fill="url(#bannerAccent)"/>
+</svg>

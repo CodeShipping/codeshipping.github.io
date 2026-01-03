@@ -1,0 +1,49 @@
+<svg width="820" height="312" viewBox="0 0 820 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="820" height="312" fill="#0d1117"/>
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="fbAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0.5" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Decorative geometric shapes - left -->
+  <g opacity="0.2">
+    <path d="M 50 80 L 90 100 L 75 150 L 35 150 L 20 100 Z" stroke="#00d9ff" stroke-width="2" fill="none"/>
+    <path d="M 30 200 L 70 220 L 55 270 L 15 270 L 0 220 Z" stroke="#00d9ff" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Decorative geometric shapes - right -->
+  <g opacity="0.2">
+    <path d="M 730 80 L 770 100 L 755 150 L 715 150 L 700 100 Z" stroke="#00d9ff" stroke-width="2" fill="none"/>
+    <path d="M 750 200 L 790 220 L 775 270 L 735 270 L 720 220 Z" stroke="#00d9ff" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Main content centered -->
+  <g transform="translate(410, 156)">
+    <!-- Main tagline - larger and prominent -->
+    <text x="0" y="-10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="56" font-weight="700" fill="white" text-anchor="middle" letter-spacing="2">BUILD. SHIP. REPEAT.</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="22" font-weight="400" fill="#8b949e" text-anchor="middle">Android Apps • AI Tools • Developer Resources</text>
+  </g>
+  
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="820" height="4" fill="url(#fbAccent)"/>
+  
+  <!-- Bottom accent bars -->
+  <g opacity="0.5">
+    <rect x="250" y="280" width="100" height="4" rx="2" fill="url(#fbAccent)"/>
+    <rect x="360" y="280" width="100" height="4" rx="2" fill="url(#fbAccent)" opacity="0.7"/>
+    <rect x="470" y="280" width="100" height="4" rx="2" fill="url(#fbAccent)"/>
+  </g>
+  
+  <!-- Forward chevrons accent -->
+  <g opacity="0.3" stroke="#00ff88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 680 150 L 690 156 L 680 162"/>
+    <path d="M 690 150 L 700 156 L 690 162"/>
+  </g>
+</svg>

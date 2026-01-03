@@ -40,11 +40,11 @@ export default function Home({ apps, stats }: HomeProps) {
   return (
     <Layout>
       <Head>
-        <title>CodeShipping — Where Code Becomes Product</title>
+        <title>CodeShipping — Build. Ship. Repeat.</title>
         <meta name="description" content="We build innovative Android apps that solve real problems. From AI-powered messaging to productivity tools, we ship code that matters." />
         <meta name="keywords" content="CodeShipping, Android apps, mobile development, AI apps, productivity apps" />
         <meta name="author" content="CodeShipping" />
-        <meta property="og:title" content="CodeShipping — Where Code Becomes Product" />
+        <meta property="og:title" content="CodeShipping — Build. Ship. Repeat." />
         <meta property="og:description" content="We build innovative Android apps that solve real problems." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://codeshipping.github.io" />

@@ -1,6 +1,6 @@
 # CodeShipping Website
 
-Modern landing page for CodeShipping - Where Code Becomes Product.
+Modern landing page for CodeShipping - Build. Ship. Repeat.
 
 ## 🚀 Features
 
@@ -169,4 +169,4 @@ Modify `tailwind.config.js` for theme customization or add custom styles to `sty
 
 ---
 
-**CodeShipping** - Where Code Becomes Product 🚀
+**CodeShipping** - Build. Ship. Repeat. 🚀

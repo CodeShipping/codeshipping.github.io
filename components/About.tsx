@@ -66,7 +66,7 @@ export default function About() {
                 C
               </div>
               <h3 className="text-2xl font-bold mb-2">CodeShipping</h3>
-              <p className="text-surface-400 italic">"Where Code Becomes Product"</p>
+              <p className="text-surface-400 italic">"Build. Ship. Repeat."</p>
             </div>
           </div>
         </div>
