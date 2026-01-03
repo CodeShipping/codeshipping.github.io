@@ -49,11 +49,11 @@ export default function AppsGrid({ apps }: AppsGridProps) {
           href={app.playStoreUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group bg-surface-800/50 border border-surface-700 rounded-2xl p-6 transition-all duration-300 hover:border-primary-500/50 hover:bg-surface-800/70 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary-500/10"
+          className="group relative bg-surface-800/50 border border-surface-700 rounded-2xl p-6 transition-all duration-300 hover:border-primary-500/50 hover:bg-surface-800/70 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary-500/10 overflow-hidden"
         >
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-t-2xl scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+          
           <div className="relative">
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-            
             <div className="flex items-start gap-4 mb-4">
               <img 
                 src={app.icon} 
